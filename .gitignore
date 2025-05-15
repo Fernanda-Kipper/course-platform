@@ -1,0 +1,46 @@
+## FRONT
+course-platform-front/node_modules
+course-platform-front/.vscode
+course-platform-front/.idea
+course-platform-front/.DS_Store
+course-platform-front/.angular
+course-platform-front/.angular-cache
+course-platform-front/dist
+
+.DS_Store
+
+## API
+// change all paths to be api paths
+course-platform-api/HELP.md
+course-platform-api/target/
+course-platform-api/!.mvn/wrapper/maven-wrapper.jar
+course-platform-api/!**/src/main/**/target/
+course-platform-api/!**/src/test/**/target/
+
+### STS ###
+course-platform-api/.apt_generated
+course-platform-api/.classpath
+course-platform-api/.factorypath
+course-platform-api/.project
+course-platform-api/.settings
+course-platform-api/.springBeans
+course-platform-api/.sts4-cache
+
+### IntelliJ IDEA ###
+course-platform-api/.idea
+course-platform-api/*.iws
+course-platform-api/*.iml
+course-platform-api/*.ipr
+
+### NetBeans ###
+course-platform-api/nbproject/private/
+course-platform-api/nbbuild/
+course-platform-api/dist/
+course-platform-api//nbdist/
+course-platform-api/.nb-gradle/
+course-platform-api/build/
+course-platform-api/!**/src/main/**/build/
+course-platform-api/!**/src/test/**/build/
+
+### VS Code ###
+.vscode/

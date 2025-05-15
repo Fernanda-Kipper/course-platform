@@ -1,0 +1,25 @@
+<section class="course-list-container">
+  <div class="header">
+    <h1>Aprenda no seu ritmo</h1>
+    <p>
+      Assista aos cursos quando e onde quiser, no seu próprio ritmo. Nossos
+      conteúdos são criados por especialistas para você aprender de verdade.
+    </p>
+  </div>
+
+  @if (courses$ | async; as courses) {
+  <div class="course-grid">
+    @for (course of courses; track course.id) {
+    <app-course-card [course]="course"></app-course-card>
+    }
+  </div>
+  } @else {
+  <div class="loading-container">
+    <div class="loading-skeleton">
+      <div class="skeleton-line small"></div>
+      <div class="skeleton-line medium"></div>
+      <div class="skeleton-line large"></div>
+    </div>
+  </div>
+  }
+</section>

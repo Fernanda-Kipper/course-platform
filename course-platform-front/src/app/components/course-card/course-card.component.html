@@ -1,0 +1,41 @@
+<div class="card">
+  <a [routerLink]="['/', course.slug, getFirstVideoToPlay()]" class="card-link">
+    <div class="card-header">
+      <h3>{{ course.title }}</h3>
+    </div>
+    <div class="card-body">
+      <div class="metadata">
+        <span class="video-count"> {{ course.videos.length }} Vídeos </span>
+
+        <div class="progress-circle">
+          <svg viewBox="0 0 36 36">
+            <circle
+              cx="18"
+              cy="18"
+              r="16"
+              fill="none"
+              class="circle-bg"
+              stroke-width="2"
+            ></circle>
+            <circle
+              cx="18"
+              cy="18"
+              r="16"
+              fill="none"
+              [ngClass]="{
+                'circle-progress': progress > 0,
+                'circle-empty': progress === 0
+              }"
+              stroke-width="2"
+              [style.strokeDasharray]="getCircumference()"
+              [style.strokeDashoffset]="dashOffset"
+            ></circle>
+          </svg>
+          <span class="percentage"> {{ progressPercentage }}% </span>
+        </div>
+      </div>
+
+      <p class="description">{{ course.description }}</p>
+    </div>
+  </a>
+</div>
